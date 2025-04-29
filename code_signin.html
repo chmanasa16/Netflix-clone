@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix Code Sign In</title>
+  <link rel="stylesheet" href="sign_in.css" />
+  <link rel="icon" href="nlogo.jpeg">
+  <script>
+    function generateCode() {
+      const code = Math.floor(100000 + Math.random() * 900000);
+      document.getElementById("code").value = code;
+      alert("Your sign-in code is: " + code);
+    }
+  </script>
+</head>
+<body>
+  <div class="background">
+    <div class="login-box">
+      <h1>Sign In with Code</h1>
+      <form>
+        <input type="text" placeholder="Email or phone" required />
+        <input id="code" type="text" placeholder="Enter code" required />
+        <button class="signin-btn" type="submit">Sign In</button>
+        <button type="button" class="code-btn" onclick="generateCode()">Generate Code</button>
+        <div class="signup">
+          <a href="index(sign_in).html">Back to sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style(main).css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav" class="nav">
+      <img class="nav__logo" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="" />
+      <img class="nav__avatar" src="netflix-avatar.png" alt="" />
+    </div>
+
+    <!-- banner carousel -->
+    <header class="banner">
+      <!-- Slide 1 -->
+      <div class="banner__slide active" style="background-image: url('banner1.jpg')">
+        <div class="banner__contents">
+          <h1 class="banner__title">Money Heist</h1>
+          <div class="banner__buttons">
+            <button class="banner__button">Play</button>
+            <button class="banner__button">My List</button>
+          </div>
+          <h1 class="banner__description">
+            The Professor recruits eight criminals to carry out a bold bank heist in Spain.
+          </h1>
+        </div>
+        <div class="banner--fadeBottom"></div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="banner__slide" style="background-image: url('banner2.jpeg')">
+        <div class="banner__contents">
+          <h1 class="banner__title">Stranger Things</h1>
+          <div class="banner__buttons">
+            <button class="banner__button">Play</button>
+            <button class="banner__button">My List</button>
+          </div>
+          <h1 class="banner__description">
+            A group of young friends witness supernatural forces and secret experiments.
+          </h1>
+        </div>
+        <div class="banner--fadeBottom"></div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="banner__slide" style="background-image: url('banner3.jpeg')">
+        <div class="banner__contents">
+          <h1 class="banner__title">The Witcher</h1>
+          <div class="banner__buttons">
+            <button class="banner__button">Play</button>
+            <button class="banner__button">My List</button>
+          </div>
+          <h1 class="banner__description">
+            Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny.
+          </h1>
+        </div>
+        <div class="banner--fadeBottom"></div>
+      </div>
+    </header>
+  <!-- Netflix Originals -->
+  <div class="row">
+    <h2>NETFLIX ORIGINALS</h2>
+    <div class="row__posters">
+      <img class="row__poster row__posterLarge" src="large-movie1.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie2.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie3.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie4.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie5.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie6.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie7.jpg" alt="" />
+
+      <img class="row__poster row__posterLarge" src="large-movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Trending Now -->
+  <div class="row">
+    <h2>Trending Now</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Top Rated -->
+  <div class="row">
+    <h2>Top Rated</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Action Movies -->
+  <div class="row">
+    <h2>Action Movies</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Comedy Movies -->
+  <div class="row">
+    <h2>Comedy Movies</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Horror Movies -->
+  <div class="row">
+    <h2>Horror Movies</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Romance Movies -->
+  <div class="row">
+    <h2>Romance Movies</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+
+  <!-- Documentaries -->
+  <div class="row">
+    <h2>Documentaries</h2>
+    <div class="row__posters">
+      <img class="row__poster" src="small_movie1.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie2.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie3.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie4.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie5.jpg" alt="" />
+
+      <img class="row__poster" src="small_movie6.avif" alt="" />
+
+      <img class="row__poster" src="small_movie7.jpeg" alt="" />
+
+      <img class="row__poster" src="small_movie8.jpg" alt="" />
+    </div>
+  </div>
+    <!-- JavaScript for scrolling nav and carousel -->
+    <script>
+      const nav = document.getElementById("nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= 100) {
+          nav.classList.add("nav__black");
+        } else {
+          nav.classList.remove("nav__black");
+        }
+      });
+
+      let currentBanner = 0;
+      const slides = document.querySelectorAll(".banner__slide");
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentBanner = (currentBanner + 1) % slides.length;
+        showSlide(currentBanner);
+      }
+
+      setInterval(nextSlide, 3000); // change every 5 seconds
+    </script>
+  </body>
+</html>

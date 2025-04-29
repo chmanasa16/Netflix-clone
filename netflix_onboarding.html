@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Onboarding</title>
+  <link rel="icon" href="nlogo.jpeg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      overflow: hidden;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      background: transparent;
+      z-index: 1000;
+    }
+
+    .header .right {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .header button {
+      border: none;
+      background: transparent;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    /* Dark overlay ON image only */
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* 50% black */
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 120px;
+      width: 100%;
+      text-align: center;
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    .overlay h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      z-index: 3;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background-color: gray;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: white;
+    }
+
+    .get-started {
+      background-color: red;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 4px;
+      width: 90%;
+      font-size: 16px;
+      margin: auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="left">
+      <img src="nlogo.jpeg" alt="Netflix Logo" width="60">
+    </div>
+    <div class="right">
+      <a href="https://help.netflix.com/legal/privacy?netflixsource=android&fromApp=true" style="color:white; text-decoration:none;">
+        <button>PRIVACY</button>
+      </a>
+      <button onclick="window.location.href='index(sign_in).html'">SIGN IN</button>
+    </div>
+  </div>
+
+  <div class="carousel-container" id="carousel">
+    <div class="slide" style="background-image: url('netflix_bg.jpg')">
+      <div class="overlay">
+        <h1>Unlimited entertainment, one low price</h1>
+        <p>Everything on Netflix starting at just ₹149.</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('onboard2.jpg')">
+      <div class="overlay">
+        <h1>Download and watch offline</h1>
+        <p>Always have something to watch.</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('onboard3.jpg')">
+      <div class="overlay">
+        <h1>Cancel online anytime</h1>
+        <p>Join today, no reason to wait.</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('onboard4.jpg')">
+      <div class="overlay">
+        <h1>Watch everywhere</h1>
+        <p>Stream on your phone, tablet, laptop, TV and more.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <button class="get-started" onclick="window.location.href='index(landing_page).html'">GET STARTED</button>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const dots = document.querySelectorAll('.dot');
+
+    carousel.addEventListener('scroll', () => {
+      const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    });
+  </script>
+</body>
+</html>
