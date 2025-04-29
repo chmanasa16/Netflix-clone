@@ -12,14 +12,29 @@
       document.getElementById("code").value = code;
       alert("Your sign-in code is: " + code);
     }
+
+    function handleSignIn(event) {
+      event.preventDefault(); // Stop form from submitting normally
+
+      const emailOrPhone = document.getElementById("email").value.trim();
+      const code = document.getElementById("code").value.trim();
+
+      if (emailOrPhone === "" || code === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Redirect if fields are filled
+      window.location.href = "index(sign_in).html";
+    }
   </script>
 </head>
 <body>
   <div class="background">
     <div class="login-box">
       <h1>Sign In with Code</h1>
-      <form>
-        <input type="text" placeholder="Email or phone" required />
+      <form onsubmit="handleSignIn(event)">
+        <input id="email" type="text" placeholder="Email or phone" required />
         <input id="code" type="text" placeholder="Enter code" required />
         <button class="signin-btn" type="submit">Sign In</button>
         <button type="button" class="code-btn" onclick="generateCode()">Generate Code</button>
